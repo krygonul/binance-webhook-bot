@@ -1,0 +1,9 @@
+@echo off
+echo [1/3] Python bağımlılıkları yükleniyor...
+pip install -r requirements.txt
+
+echo [2/3] Flask sunucusu başlatılıyor...
+start cmd /k "py webhook_server.py"
+
+echo [3/3] LocalTunnel başlatılıyor...
+start cmd /k "start_localtunnel.bat"
